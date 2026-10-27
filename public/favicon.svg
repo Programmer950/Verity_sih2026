@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="6" fill="#0f172a"/>
+  <!-- Geometric mark representing interconnected evidence and verification -->
+  <path d="M9 10h8m-8 6h14m-14 6h10" stroke="#94a3b8" stroke-width="1.75" stroke-linecap="round"/>
+  <circle cx="21" cy="10" r="3" fill="#2563eb" stroke="#0f172a" stroke-width="1.5"/>
+  <path d="M20 10l0.8 0.8 1.6 -1.6" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

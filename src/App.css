@@ -1,0 +1,31 @@
+/* Application-level layout styles */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Skip to content accessibility link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  background: var(--text-primary);
+  color: var(--text-inverse);
+  padding: 8px 16px;
+  z-index: 999;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  transition: top 0.2s ease;
+  border-radius: var(--radius-xs);
+}
+
+.skip-link:focus {
+  top: 10px;
+}

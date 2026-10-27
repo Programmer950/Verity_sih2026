@@ -1,0 +1,180 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(251, 251, 250, 0.85);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.scrolled {
+  background-color: rgba(251, 251, 250, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom-color: var(--border-hairline);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.brandMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.brandName {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navLink {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.15s ease;
+  position: relative;
+  padding: 4px 0;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statusIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  padding: 5px 10px;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #d97706; /* Muted amber */
+  position: relative;
+}
+
+.statusDot::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background-color: rgba(217, 119, 6, 0.3);
+  animation: pulse 2.5s infinite ease-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+.statusText {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #475569;
+}
+
+.mobileToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  border: 1px solid var(--border-hairline);
+  background-color: var(--bg-card);
+}
+
+.mobileDrawer {
+  display: none;
+  flex-direction: column;
+  padding: 16px var(--container-pad) 24px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-hairline);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mobileNavLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.mobileNavLink:hover {
+  color: var(--text-primary);
+}
+
+.mobileStatusWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobileTeamInfo {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+  .mobileToggle {
+    display: flex;
+  }
+  .mobileDrawer {
+    display: flex;
+  }
+}
